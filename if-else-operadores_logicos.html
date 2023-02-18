@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+     <meta charset=utf-8>
+     <meta name=description content="">
+     <meta name=viewport content="width=device-width, initial-scale=1">     
+     <title>Aprovado ou Reprovado JS</title>
+
+     <script>
+         /* //true
+          if (2 == 2 && 3 >= 1) {
+               document.write('Verdadeiro! ')
+          }
+          else{
+               document.write('Falso! ')
+          }*/
+
+          var nota1 =  prompt('Digite a primeira nota ')
+          var nota2 =  prompt('Digite a segunda nota ')
+          var faltaSemestre = prompt('Digite a quantidade de faltas no semestre ')
+          
+          nota1 = parseInt(nota1)
+          nota2 = parseInt(nota2)
+          faltaSemestre = parseInt(faltaSemestre)
+          resultado = (nota1 + nota2)/2
+
+          if (resultado >=7 && faltaSemestre <=10) {
+               document.write('<br> Aprovado! <br><br>')
+               document.write('A média do aluno foi de '+ resultado + '<br>')
+               document.write('Ele teve '+ faltaSemestre + ' faltas nesse semestre')
+          }
+          else{
+               document.write('<br> Reprovado <br>')
+               document.write('<br>A média do aluno foi de ' + resultado + '<br>')
+               document.write('<br>Ele teve '+ faltaSemestre + ' faltas nesse semestre')
+          }
+
+     </script>
+</head>
+
+<body>
+     
+</body>
+
+</html>
