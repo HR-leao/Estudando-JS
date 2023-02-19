@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Massa corporal</title>
+
+	<script>
+
+		//) Crie uma aplicação para efetuar o cálculo do índice de massa corporal. 
+
+		var nome = prompt('Digite seu nome ');
+		var altura = prompt('Digite sua altura ');
+		var peso = prompt('Digite seu peso ');
+
+		altura = parseFloat(altura);
+		altura = altura / 100
+		peso = parseFloat(peso);
+		
+		//calculando IMC
+		var imc = peso / (altura * altura);
+		imc = parseFloat(imc)
+		//Mostrando resultado
+		document.write('<br>Olá, ' + nome +' <br>Vamos calcular seu IMC.<br>')
+		
+		if(imc < 16){
+			document.write('<br>Baixo peso muito grave')
+		}
+		else if (imc >= 16 && imc <=16.99) {
+			document.write('Baixo peso grave')
+		}
+		else if (imc >= 17 && imc <=18.49){
+			document.write('Baixo peso')
+		}
+		else if(imc >= 18.50 && imc <= 24.99){
+			document.write('Peso normal')
+		}
+		else if (imc >=25 && imc <= 29.99){
+			document.write('Sobre peso')
+		}
+		else if(imc >= 30 && imc <=34.99 ){
+			document.write('Obesidade grau 1')
+		}
+		else if(imc >= 35 && imc <= 39.99){
+			document.write('Obesidade grau 2')
+		}
+		else{
+			document.write('Obesidade grau 3')
+		}
+
+		document.write('<br>IMC = ' + imc +'<br>')
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
