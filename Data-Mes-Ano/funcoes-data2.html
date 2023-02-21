@@ -1,0 +1,69 @@
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Funções Data 02</title>
+
+	<script>
+		/*
+		var data = new Date()
+		//adiona ou remover dias da data
+
+		document.write(data.toString())
+		data.setDate(data.getDate() + 1)
+		document.write('<br>'+ data.toString()) 
+		document.write('<hr>')
+		
+
+		//adicionando e removendo meses
+		document.write(data.toString())
+		data.setMonth(data.getMonth() - 1)
+		document.write('<br>'+ data.toString()) 
+		document.write('<hr>')
+		
+
+		//adicionando e removendo anos
+		document.write(data.toString())
+		data.setFullYear(data.getFullYear() + 1)
+		document.write('<br>'+ data.toString()) 
+		*/
+
+		// 15/01/2017
+		var data1 = new Date( 2017, 0, 15)
+
+		// 23/02/2017
+		var data2 = new Date( 2017, 1, 23)
+
+		document.write(data1.toString(data1))
+		document.write('<br/>')
+		document.write(data2.toString(data2))
+
+		document.write('<br/><hr/>')
+		//converter datas para algo que possamos calcular
+		document.write(data1.getTime(data1)) /* get time = recupera a quantidade de milisegundo que existe 
+		entre a data de 1 de janeiro de 1970 até a data em questão. Essa data é um padrão computacional.
+		*/
+		document.write('<br/>')
+		document.write(data2.getTime(data2))
+
+		//encontrar a quantidade de milisegundos entre a data1 e data2
+		var milisegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())//Math.abs = retorna o valor absoluto.
+		var milisegundos_por_dia = (1*24*60*60*1000) 
+		document.write(milisegundos_entre_datas)
+		
+		
+		/* 1 DIA TEM 24 HORAS, CADA HORA TEM 60 MINUTOS, 
+		CADA MINUTO TEM 60 SEGUNDOS E CADA SEGUNDO TEM 1000 MILESEGUNDOS
+		
+		*/
+		document.write('<br/><br/>')
+		document.write('A diferença entre data1 e data2 é de ' + Math.ceil(milisegundos_entre_datas / milisegundos_por_dia) + ' dias') // Math.ceil = arredonda o número para cima
+		document.write('<br/><br/>')
+		
+	</script>
+
+</head>
+<body>
+	
+</body>
+</html>
