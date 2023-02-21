@@ -1,0 +1,28 @@
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Funções</title>
+
+		<script>
+			//void Essa função realiza oq está sendo pedido mas não mostra na tela.
+			//returnessa retorna as informações na tela.
+			function calcularAreaTerreno(largura, comprimento){
+				//lógica
+				var area = largura * comprimento
+				area = parseInt(area)
+				comprimento = parseInt(comprimento)
+				return area
+			}
+
+			var largura = prompt ('Digite a Largura do terreno ')
+			var comprimento  = prompt ('Digite o comprimento do terreno ')
+			var area = calcularAreaTerreno(largura,comprimento)
+
+			document.write('O terreno possui ' + area +' Metros quadrados')
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

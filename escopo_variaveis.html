@@ -1,0 +1,28 @@
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Escopo e variáveis</title>
+
+	<script>
+		//3 tipos de escopos: GLOBAL, FUNÇÃO E O BLOCO
+		var serie = 'Friends' // Global
+		if (true) {
+			var serie2 = 'Game of thrones'
+			document.write(serie)
+		}
+		document.write(serie2)
+		document.write('<br>')
+		function x (){
+			var serie3 = 'The walking dead'
+			document.write(serie)
+			document.write(serie2)
+		}
+		x()
+		document.write(serie3)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
