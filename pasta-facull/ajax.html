@@ -1,0 +1,38 @@
+<!doctype html>
+2<html lang="pt-BR">
+3<head>
+4<meta charset="utf-8">
+5<title>Requisições AJAX com jQuery</title>
+6<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+7</head>
+8<body>
+9<p>
+10<a id="lnk" href="javascript:void(0);">Executar a requisição AJAX</a>
+11</p>
+12<!-- Esse div mostrará o resultado da requisição AJAX -->
+13<div id="resultado"></div>
+14<script type="text/javascript">
+15//Click do link
+16$('#lnk').click(function () {
+17$.ajax({
+18url: "url/recurso",
+19type: 'post',
+20beforeSend: function () {
+21//A função beforeSend é chamada antes da requisição ser submetida.
+22//Dependendo da velocidade do retorno da requisição, a msg abaixo pode não chegar
+23// a ser exibida
+24$("#resultado").html("Carregando...");
+25}
+26})
+27.done(function (msg) {
+28//Em caso de sucesso, mostra na div #resultado o retorno da requisição
+29$("#resultado").html(msg);
+30})
+31.fail(function (jqXHR, textStatus, msg) {
+32//Em caso de fracasso, mostra no console a mensagem de erro retornada
+33console.log('A requisição falhou e retornou com a seguinte mensagem: ' + msg);
+34});
+35});
+36</script>
+37</body>
+38</html>
